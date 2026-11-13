@@ -10,6 +10,14 @@ const Showcase = () => {
     loop: true,
     mode: "free",
     slides: { origin: "center", perView: 2.5, spacing: 10 },
+    breakpoints: {
+      "(max-width: 640px)": {
+        slides: { origin: "center", perView: 1.15, spacing: 8 },
+      },
+      "(min-width: 641px) and (max-width: 900px)": {
+        slides: { origin: "center", perView: 1.8, spacing: 10 },
+      },
+    },
     range: {
       min: -5,
       max: 5,
@@ -21,9 +29,9 @@ const Showcase = () => {
     // <div className='h-[550px]'>Showcase</div>
     <>
 
-      <div className='h-max flex justify-between items-center mx-20 mt-15 mb-8'>
-        <h1 className='text-5xl font-poppins font-medium text-gray-300'>Our <span className='text-gray-600'>Stars</span> in Action</h1>
-        <p className='w-[300px] text-[20px] font-mono italic animate-pulse'>See how our trainees are making waves — from local campaigns to global stages</p>
+      <div className='mx-auto mb-6 mt-10 flex h-max w-full max-w-[1440px] flex-col items-start justify-between gap-3 px-4 sm:mb-8 sm:mt-15 sm:flex-row sm:items-center sm:px-6 lg:px-10 xl:px-20'>
+        <h1 className='font-poppins text-4xl font-medium text-gray-300 sm:text-5xl'>Our <span className='text-gray-600'>Stars</span> in Action</h1>
+        <p className='w-full text-base font-mono italic animate-pulse sm:w-[300px] sm:text-[20px]'>See how our trainees are making waves — from local campaigns to global stages</p>
       </div>
 
       <div ref={sliderRef} className="keen-slider">
@@ -61,4 +69,3 @@ const Showcase = () => {
 }
 
 export default Showcase
-

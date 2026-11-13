@@ -46,9 +46,9 @@ const Program = () => {
   
   return (
 
-    <div className='h-[550px] px-20 flex flex-col justify-between'>
+    <div className='mx-auto flex h-auto w-full max-w-[1440px] flex-col gap-6 px-4 py-4 sm:px-6 lg:min-h-[550px] lg:justify-between lg:gap-0 lg:px-10 xl:px-20'>
       <div className='flex justify-between items-center'>
-        <button className='w-[60px] h-[60px] rounded-full border-4 text-3xl border-gray-300 text-gray-300 cursor-pointer' onClick={
+        <button className='h-12 w-12 rounded-full border-4 border-gray-300 text-2xl text-gray-300 cursor-pointer sm:h-[60px] sm:w-[60px] sm:text-3xl' onClick={
           () => {
             setIndex(indexCalc())
             AOS.refresh()
@@ -58,30 +58,30 @@ const Program = () => {
         }>
           <i className="fa-solid fa-arrow-right"></i>
         </button>
-        <h1 className=' font-mono text-[20px] italic animate-pulse'>Train. Transform. Take the Stage.</h1>
+        <h1 className='text-right font-mono text-sm italic animate-pulse sm:text-[20px]'>Train. Transform. Take the Stage.</h1>
       </div>
 
 
-      <div className='flex justify-between'>
+      <div className='flex flex-col gap-6 lg:flex-row lg:justify-between'>
 
-        <div className='w-[500px] h-[450px] p-2.5 flex gap-2.5'>
-          <div className='imageOne w-[200px] '>
+        <div className='flex h-[300px] w-full gap-2.5 p-1 sm:h-[400px] lg:h-[450px] lg:w-[44%] lg:p-2.5'>
+          <div className='imageOne w-[40%]'>
             <img className='h-full w-full object-cover' src={slideOne[index]} alt="" title='Image One' data-aos="fade-up-right" data-aos-duration='1000'/>
           </div>
-          <div className='flex flex-col  w-[280px] gap-2.5 justify-between'>
-            <div className='h-[280px]'>
+          <div className='flex min-w-0 flex-1 flex-col justify-between gap-2.5'>
+            <div className='h-[62%]'>
               <img className='h-full w-full object-cover' src={slideTwo[index]} alt="" title='Image Two' />
             </div>
-            <div className=' h-[140px]'>
+            <div className='h-[32%]'>
               <img className='h-full w-full object-cover' src={slideThree[index]} alt="" title='Image Three' />
             </div>
           </div>
         </div>
 
-        <div className='w-[800px]  text-right relative'>
-          <h1 className='font-poppins text-9xl font-semibold mb-5'>{sideText[index].heading}</h1>
-          <p className='font-lora text-3xl italic'>ʻʻ{sideText[index].subheading}ʼʼ</p>
-          <button className='flex text-2xl text-gray-300 items-center gap-2.5 h-12 absolute bottom-0 right-0 border-b-2 border-transparent transition-all duration-300 cursor-pointer hover:border-gray-500 hover:text-gray-500'><span>View Full Curriculum</span><i className="fa-solid fa-arrow-right"></i></button>
+        <div className='relative w-full text-left lg:w-[52%] lg:text-right'>
+          <h1 className='mb-3 font-poppins text-5xl font-semibold sm:text-6xl lg:mb-5 lg:text-7xl xl:text-8xl'>{sideText[index].heading}</h1>
+          <p className='font-lora text-xl italic sm:text-2xl lg:text-3xl'>ʻʻ{sideText[index].subheading}ʼʼ</p>
+          <button className='mt-5 flex h-12 items-center gap-2.5 border-b-2 border-transparent text-lg text-gray-300 transition-all duration-300 cursor-pointer hover:border-gray-500 hover:text-gray-500 sm:text-2xl lg:absolute lg:bottom-0 lg:right-0 lg:mt-0'><span>View Full Curriculum</span><i className="fa-solid fa-arrow-right"></i></button>
         </div>
 
       </div>

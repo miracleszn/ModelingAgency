@@ -3,8 +3,8 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 
 const Admission = () => {
   return (
-    <div className="group min-h-[400px] my-20 flex justify-between relative">
-      <div className="w-[480px] text-8xl font-poppins text-black">
+    <div className="group relative my-12 flex min-h-[400px] w-full flex-col gap-8 px-4 sm:my-16 sm:px-8 lg:my-20 lg:flex-row lg:justify-between lg:gap-0 lg:px-0">
+      <div className="w-full font-poppins text-5xl text-black sm:text-6xl lg:w-[480px] lg:text-8xl">
         <span className="opacity-40 transition-all duration-150 hover:opacity-100 cursor-pointer">
           Ready{" "}
         </span>
@@ -25,41 +25,41 @@ const Admission = () => {
           Spotlight?
         </span>
       </div>
-      <div className="w-[230px] h-full absolute left-1/3 z-10 transition-all duration-500 group-hover:opacity-0 group-hover:-z-10">
+      <div className="absolute left-1/3 z-10 hidden h-full w-[230px] transition-all duration-500 group-hover:opacity-0 group-hover:-z-10 lg:block">
         <img
           className="h-full w-full object-cover"
           src="./image/four.jpg"
           alt=""
         />
       </div>
-      <div className="opacity-0 transition-all duration-300 delay-300 group-hover:opacity-100 group-hover:z-20 flex flex-col justify-evenly  ">
-        <div className="w-[200px] h-[250px]">
+      <div className="flex w-full flex-col items-start gap-4 opacity-100 lg:w-auto lg:items-center lg:justify-evenly lg:opacity-0 lg:transition-all lg:duration-300 lg:delay-300 lg:group-hover:z-20 lg:group-hover:opacity-100">
+        <div className="hidden h-[250px] w-[200px] lg:block">
           <img
             className="w-full h-full object-scale-down rotate-[-30deg] opacity-10"
             src="./icons/arrow.svg"
             alt=""
           />
         </div>
-        <button className="h-[60px] w-max px-5 py-1.5 bg-gray-600 font-poppins text-[19px] font-medium cursor-pointer text-white hover:bg-gray-500">
+        <button className="h-[60px] w-max max-w-full px-5 py-1.5 bg-gray-600 font-poppins text-base font-medium cursor-pointer text-white hover:bg-gray-500 sm:text-[19px]">
           Book an Assessment
         </button>
       </div>
-      <div className="w-[230px] h-full absolute right-1/3 transition-all duration-500 group-hover:opacity-0 group-hover:-z-10">
+      <div className="absolute right-1/3 h-full w-[230px] transition-all duration-500 group-hover:opacity-0 group-hover:-z-10 hidden lg:block">
         <img
           className="h-full w-full object-cover"
           src="./image/two.jpg"
           alt=""
         />
       </div>
-      <div className="w-[480px] text-8xl font-poppins flex flex-col justify-between">
+      <div className="flex w-full flex-col justify-between font-poppins text-5xl sm:text-6xl lg:w-[480px] lg:text-8xl">
         <div className="flex">
-            <h1 className="text-8xl font-poppins opacity-40 mb-4">FAQs</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-14 opacity-20 animate-bounce">
+            <h1 className="mb-4 font-poppins text-5xl opacity-40 sm:text-6xl lg:text-8xl">FAQs</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 opacity-20 animate-bounce sm:size-14">
             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
         </svg>
         </div>
 
-        <div className="h-[280px] overflow-y-scroll no-scrollbar">
+        <div className="max-h-[280px] overflow-y-auto no-scrollbar">
             
         <Disclosure>
           <div className=" flex flex-col pr-7">

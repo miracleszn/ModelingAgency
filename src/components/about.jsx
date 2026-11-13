@@ -8,16 +8,16 @@ const visionText = "Our goal is to create a new generation of models who influen
 
 const Card = ({heading, subheading}) => {
   return(
-    <div className='w-[400px] h-[400px] border-l-[10px] bg-gray-100 p-4 pt-14 flex flex-col justify-evenly transition-all duration-500 hover:border-indigo-700'>
-      <h1 className='text-3xl font-poppins font-semibold'>{heading}</h1>
-      <p className='font-lora'>{subheading}</p>
+    <div className='flex min-h-[280px] w-full max-w-[400px] flex-col justify-evenly border-l-[10px] bg-gray-100 p-5 pt-8 transition-all duration-500 hover:border-indigo-700 sm:min-h-[320px] sm:p-7 sm:pt-10 lg:h-[400px]'>
+      <h2 className='font-poppins text-2xl font-semibold sm:text-3xl'>{heading}</h2>
+      <p className='font-lora text-sm leading-relaxed sm:text-base'>{subheading}</p>
     </div>
   )
 }
 
 const About = () => {
   return (
-    <div className='h-[500px] bg-[#747474] my-10 flex justify-evenly items-center'>
+    <div className='my-10 grid grid-cols-1 items-center justify-items-center gap-4 bg-[#747474] px-4 py-8 sm:grid-cols-2 sm:gap-5 sm:px-6 lg:min-h-[500px] lg:grid-cols-3 lg:justify-evenly lg:px-8 lg:py-10'>
       <Card heading={"Our History"} subheading={historyText}/>
       <Card heading={"Our Philosophy"} subheading={philosophyText}/>
       <Card heading={"Our Vision & Impact"} subheading={visionText}/>
